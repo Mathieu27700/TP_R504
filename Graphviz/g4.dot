@@ -1,0 +1,30 @@
+graph {
+    layout=neato;            
+    overlap=false;
+    //splines=true;
+node [ image="icon_router.png", shape="none", fontsize="45pt", fontcolor="red"];
+edge [fontsize="40pt", color="blue"];
+    A [pos="7,3!"];
+    B [pos="6,5!"];
+    C [pos="5,3!"];
+    D [pos="3.5,3.5!"];
+    E [pos="3.5,1!"];
+    F [pos="2,2!"];
+    G [pos="2.5,5!"];
+    H [pos="4.5,6!"];
+    A -- B [label="1"];
+    A -- C [label="4"];
+    B -- C [label="2"];
+    B -- D [label="9"];
+    B -- H [label="2"];
+    B -- G [label="4"];
+    C -- D [label="1"];
+    C -- E [label="3"];
+    D -- E [label="1"];
+    D -- F [label="3"];
+    D -- G [label="1"];
+    E -- F [label="1"];
+    F -- G [label="6"];
+    G -- H [label="14"];
+}
+
