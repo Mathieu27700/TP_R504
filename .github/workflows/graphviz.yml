@@ -1,12 +1,18 @@
 name: Graphviz
+
 on: [push]
+
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Installation de graphviz
-run: sudo ...
-- name: Check out repository code
-uses: actions/checkout@v3
-- name: Lancement graphviz
-run: ./run1.sh g1
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Installation de Graphviz
+        run: sudo apt-get update && sudo apt-get install -y graphviz
+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Lancement Graphviz
+        run: ./run1.sh g1
+
