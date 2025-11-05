@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Lancement Graphviz
-        run: cd Graphviz && ./run1.sh g1
+        run: cd Graphviz && ./run2.sh g1
 
       - name: upload du resultat
         uses: actions/upload-artifact@v4
         with:
           name: envoie vers le fichier g1.svg
-          path: Graphviz/g1.svg
+          path: Graphviz/*.svg
