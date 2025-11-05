@@ -19,5 +19,5 @@ jobs:
       - name: upload du resultat
         uses: actions/upload-artifact@v4
         with:
-          name: envoie vers le fichier g1.svg
+          name: envoie vers le fichier .svg
           path: Graphviz/*.svg
