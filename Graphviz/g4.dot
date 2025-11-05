@@ -2,8 +2,8 @@ graph {
     layout=neato;            
     overlap=false;
     //splines=true;
-node [ image="icon_router.png", shape="none", fontsize="45pt", fontcolor="red"];
-edge [fontsize="40pt", color="blue"];
+node [ image="icon_router.png" shape="none"];
+edge [fontsize="30pt" color="blue" fontcolor="red"];
     A [pos="7,3!"];
     B [pos="6,5!"];
     C [pos="5,3!"];
