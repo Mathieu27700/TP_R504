@@ -3,11 +3,11 @@
 echo "[a] Création du réseau Docker interne..."
 docker network create tplb 2>/dev/null
 
-echo "[cleanup] Suppression des anciens conteneurs..."
-docker rm -f nginx1 nginx2 nginx-lb 2>/dev/null
-
 echo "[b] Construction de l'image im-nginx-lb..."
-docker build -t im-nginx-lb ../tp-A
+if ! docker build -t im-nginx-lb ./tp-A ; then
+    echo " Erreur : impossible de construire l'image im-nginx-lb"
+    exit 1
+fi
 
 echo "[c] Création des dossiers shared1 et shared2..."
 mkdir -p shared1 shared2
@@ -36,5 +36,6 @@ docker run -d --rm \
     --name nginx-lb \
     -p 83:80 \
     --network tplb \
-    nginx:latest
+    im-nginx-lb
+
 
